@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Controle Win Services";
+}
+<center><h2>@ViewData["Title"]</h2></center>
+
+<table class='table table-striped' aria-labelledby="tableLabel">
+    <thead>
+        <tr>
+            <th>Nome Servico</th>
+            <th>Nome Maquina</th>
+            <th>Data Última Execução</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var controle in ViewBag.Controles)
+        {
+            <tr>
+                <td>@controle.NmMaquina</td>
+                <td>@controle.NmServico</td>
+                <td>@controle.DtUltimaExecucao</td>
+            </tr>
+        }
+    </tbody>
+</table>
